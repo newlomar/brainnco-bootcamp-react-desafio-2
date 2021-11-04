@@ -1,18 +1,21 @@
-import { Title3 } from './Titles'
+import { Title3, Title4 } from './Titles'
 
-function SideBar() {
+function SideBar({ links, setTitle, setContent }) {
+
+  function mudarArtigo(item) {
+
+    setTitle(item.title)
+    setContent(item.content)
+
+  }
+  
+  const listItems = links.map((item) => {
+    return <li onClick={() => mudarArtigo(item)} key={item.id}><Title4>{item.title}</Title4></li>
+  })
   return (
     <aside>
       <Title3>Exemplo de Barra Lateral</Title3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit culpa dolore molestias laborum similique facere odit, ad qui eaque adipisci?
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit culpa dolore molestias laborum similique facere odit, ad qui eaque adipisci?
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit culpa dolore molestias laborum similique facere odit, ad qui eaque adipisci?
-      </p>
+      <ul className="article-links">{listItems}</ul>
     </aside>
   )
 }
