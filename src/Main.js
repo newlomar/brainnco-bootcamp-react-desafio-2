@@ -1,6 +1,7 @@
 import { useState } from 'react/'
 import SideBar from './SideBar'
 import Conteudo from './Conteudo'
+import styled from 'styled-components';
 
 function Main({ id }) {
 
@@ -26,11 +27,17 @@ function Main({ id }) {
   const [content, setContent] = useState(arrayDeObjetos[0].content)
 
   return (
-    <main id={id}>
+    <StyledMain id={id}>
       <SideBar setTitle={setTitle} setContent={setContent} links={arrayDeObjetos} />
       <Conteudo links={arrayDeObjetos} title={title} content={content} />
-    </main>
+    </StyledMain>
   )
 }
+
+const StyledMain = styled.main`
+  background-color: cornflowerblue;
+  display: flex;
+  padding: 1rem
+`;
 
 export default Main

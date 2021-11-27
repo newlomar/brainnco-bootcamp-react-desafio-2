@@ -1,5 +1,7 @@
+import styled from 'styled-components';
+
 function Title1({ children }) {
-  return <h1>{children}</h1>
+  return <StyledH1>{children}</StyledH1>
 }
 
 function Title2({ children }) {
@@ -22,6 +24,9 @@ function Title6({ children }) {
   return <h6>{children}</h6>
 }
 
+const StyledH1 = styled.h1`
+  margin: 0;
+`;
 
 export {
   Title1,
