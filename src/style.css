@@ -1,21 +1,3 @@
-li + li {
-  padding-left: 1rem;
-}
-
-section {
-  width: 100%;
-  background-color: cyan;
-}
-
-footer {
-  background-color: chartreuse;
-  padding: 1rem;
-}
-
-button {
-  display: block;
-}
-
 .primary {
   margin-top: 1rem;
   background-color: steelblue;

@@ -6,7 +6,7 @@ function Header() {
   return (
     <StyledHeader>
       <Title1 children="Isso é uma introdução"/>
-      <Button anchor="#main" kind="primary" value="Vá para o conteúdo" />
+      <Button anchor="#main" value="Vá para o conteúdo" />
     </StyledHeader>
   )
 }

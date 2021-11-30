@@ -5,8 +5,8 @@ function Menu() {
     <StyledNav>
       <StyledUl>
         <li>Inicio</li>
-        <li>Sobre</li>
-        <li>Contato</li>
+        <StyledLi>Sobre</StyledLi>
+        <StyledLi>Contato</StyledLi>
       </StyledUl>
     </StyledNav>
   )
@@ -27,6 +27,10 @@ const StyledUl = styled.ul`
   margin: 0;
   display: flex;
   justify-content: space-between;
+`;
+
+const StyledLi = styled.li`
+  margin-left: 1em;
 `;
 
 export default Menu
