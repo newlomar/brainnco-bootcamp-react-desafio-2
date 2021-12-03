@@ -12,12 +12,6 @@ function Button({ anchor, kind, value }) {
   )
 }
 
-const StyledAnchor = styled.a`
-  text-decoration: none;
-  color: #fff;
-  
-`;
-
 const StyledButton = styled.button`
   margin-top: 1rem;
   background-color: steelblue;
@@ -25,11 +19,15 @@ const StyledButton = styled.button`
   padding: 1rem 0.5rem;
   border-color: steelblue;
   border-radius: 1rem;
-  cursor: pointer;
+  cursor: pointer;  
+`;
 
-    &:hover ${editar} {
-      opacity: 0.7;
-    }
+const StyledAnchor = styled.a`
+  text-decoration: none;
+  color: #fff;
+  &:hover ${StyledButton} {
+    opacity: 0.7;
+  }
 `;
 
 
